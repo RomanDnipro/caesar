@@ -4,14 +4,14 @@ import java.util.Scanner;
  * Created by Роман on 14.03.2017.
  */
 
-public class Helper {
+class Helper {
     /**
      * Проверка количества аргументов командной строки
      * (должен быть один обязательный аргумент(имя файла) +
      * аргумент-ключ)
      * и является ли вводимый ключ целым числом !=0
      */
-    static int check(String args[]) {
+    int check(String args[]) {
         if (args.length != 1) {
             System.out.println("print the key next time");
             System.exit(1);
@@ -24,7 +24,7 @@ public class Helper {
         return k;
     }
 
-    public static String getString(){
+     String getString(){
         Scanner sc = new Scanner(System.in);
         return sc.next();
     }

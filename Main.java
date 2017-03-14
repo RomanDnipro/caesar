@@ -2,7 +2,7 @@ import static java.lang.Character.isLetter;
 import static java.lang.Character.isUpperCase;
 import static java.lang.Character.toUpperCase;
 import static jdk.nashorn.internal.objects.ArrayBufferView.length;
-
+//import Helper.*;
 public class Main {
 
 //    @Override
@@ -11,8 +11,10 @@ public class Main {
 //        return super.toString();
 //    }
     public static void main(String[] args) {
-        int k = Helper.check(args);
-        String p = Helper.getString();
+	Helper helper = new Helper();
+	//проверка
+        int k = helper.check(args);
+        String p = helper.getString();
         //p.toUpperCase();
         for(int i = 0; i < p.length(); i++){
 
@@ -25,7 +27,8 @@ public class Main {
                     symbol = (char) ((((int)symbol - 97 + k) % 26) + 97);
                 }
             }
-            System.out.println(symbol);
+            System.out.print(symbol);
         }
+	System.out.println();
     }
 }
